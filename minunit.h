@@ -121,6 +121,7 @@ static void (*minunit_teardown)(void) = NULL;
 	if (minunit_setup) (*minunit_setup)();\
 	minunit_status = 0;\
    printf("\n%s:", #test);\
+	(void)fflush(stdout);\
 	test();\
 	minunit_run++;\
 	if (minunit_status) {\
