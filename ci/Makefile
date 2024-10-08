@@ -1,4 +1,4 @@
-CFLAGS += -Wall -Wextra
+CFLAGS += -Wall -Wextra -std=c18 -pedantic-errors -fsanitize=address
 INCLUDE_DIRS += -I../
 
 LIBS += -lm
