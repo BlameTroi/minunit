@@ -1,13 +1,3 @@
-/* minunit.h -- a minimalist c testing framework a la sunit */
-
-/*
- * i consider my modifications to minunit to be public domain. the
- * lineage of is from jera->siu->blametroi. my changes are so far
- * minor, and will likely remain so. original copyright and license
- * follow. see also comments for functions mu_timer_real and
- * mu_timer_cpu.
- */
-
 /*
  * Copyright (c) 2012 David Siñuela Pastor, siu.4coders@gmail.com
  *
@@ -130,7 +120,7 @@ minunit_real_timer = mu_timer_real();\
 }\
 if (minunit_setup) (*minunit_setup)();\
 minunit_status = 0;\
-printf("\n%s:", #test);\
+printf("\n%s:\n", #test);\
 (void)fflush(stdout);\
 test();\
 minunit_run++;\
